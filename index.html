@@ -3,24 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>movie</title>
+<title>Secret</title>
+
 <style>
-body {
-  margin: 0;
-  background: black;
+body{
+  background:#111;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+  font-family:sans-serif;
 }
-video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: contain;
+
+.container{
+  text-align:center;
+}
+
+button{
+  font-size:28px;
+  padding:20px 40px;
+  border:none;
+  border-radius:12px;
 }
 </style>
 </head>
+
 <body>
 
-<video controls autoplay playsinline>
-  <source src="movie.mp4" type="video/mp4">
-</video>
+<div class="container">
+  <h1>🔒 秘密のメッセージ</h1>
+
+  <button onclick="playVideo()">
+    ▶ 再生
+  </button>
+
+  <video id="secretVideo" style="display:none">
+    <source src="movie.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+function playVideo(){
+  document.getElementById("secretVideo").play();
+}
+</script>
 
 </body>
 </html>
